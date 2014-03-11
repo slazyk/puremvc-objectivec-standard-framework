@@ -20,7 +20,7 @@
  * 
  * @see IMediator, IObserver, INotification
  */
-@protocol IView
+@protocol IView<NSObject>
 
 /**
  * Check if a Mediator is registered or not

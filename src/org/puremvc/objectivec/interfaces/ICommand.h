@@ -4,7 +4,7 @@
  *
  * @see INotification
  */
-@protocol ICommand
+@protocol ICommand<NSObject>
 
 /**
  * Execute the <code>ICommand</code>'s logic to handle a given <code>INotification</code>.

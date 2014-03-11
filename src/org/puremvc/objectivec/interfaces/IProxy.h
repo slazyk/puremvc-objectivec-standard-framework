@@ -17,7 +17,7 @@
  * <LI>Encapsulate interaction with local or remote services used to fetch and persist model data.</LI>
  * </UL>
  */
-@protocol IProxy
+@protocol IProxy<NSObject>
 
 /**
  * Get the data object

@@ -21,7 +21,7 @@
  * 
  * @see IView, IObserver
  */
-@protocol INotification
+@protocol INotification<NSObject>
 
 /**
  * Get the body of the <code>INotification</code> instance

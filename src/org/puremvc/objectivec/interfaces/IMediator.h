@@ -33,7 +33,7 @@
  * 
  * @see INotification
  */
-@protocol IMediator
+@protocol IMediator<NSObject>
 
 /**
  * Get the <code>IMediator</code> instance name

@@ -20,7 +20,7 @@
  * 
  * @see IFacade, INotification
  */
-@protocol INotifier
+@protocol INotifier<NSObject>
 
 /**
  * Send a <code>INotification</code>.

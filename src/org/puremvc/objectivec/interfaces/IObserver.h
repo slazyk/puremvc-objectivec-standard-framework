@@ -31,7 +31,7 @@
  * 
  * @see IView, INotification
  */
-@protocol IObserver
+@protocol IObserver<NSObject>
 
 /**
  * Compare the given object to the notificaiton context object.

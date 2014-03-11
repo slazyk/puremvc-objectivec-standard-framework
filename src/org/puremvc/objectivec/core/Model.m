@@ -89,12 +89,12 @@ static id<IModel> instance;
  * @return the <code>IProxy</code> that was removed from the <code>Model</code>
  */
 -(id<IProxy>)removeProxy:(NSString *)proxyName {
-	id<IProxy> proxy = [proxyMap objectForKey:proxyName];
+	id<IProxy> proxy = [[proxyMap objectForKey:proxyName] retain];
 	if (proxy != nil) {
 		[proxy onRemove];
 		[proxyMap removeObjectForKey:proxyName];
 	}
-	return proxy;
+	return [proxy autorelease];
 }
 
 /**

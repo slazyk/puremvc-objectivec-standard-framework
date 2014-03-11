@@ -20,7 +20,7 @@
  *
  * @see INotification, ICommand
  */
-@protocol IController
+@protocol IController<NSObject>
 
 /**
  * Execute the <code>ICommand</code> previously registered as the

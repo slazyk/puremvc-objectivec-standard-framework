@@ -14,7 +14,7 @@
  * <LI>Provide methods for registering, retrieving, and removing <code>IProxy</code> instances</LI>
  * </UL>
  */
-@protocol IModel
+@protocol IModel<NSObject>
 
 /**
  * Check if a Proxy is registered

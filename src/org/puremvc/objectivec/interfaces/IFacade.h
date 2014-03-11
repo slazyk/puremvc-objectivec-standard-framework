@@ -16,7 +16,7 @@
  * 
  * @see IModel, IView, IController, ICommand, INotification
  */
-@protocol IFacade
+@protocol IFacade<NSObject>
 
 /**
  * Check if a Command is registered for a given Notification 

@@ -152,7 +152,7 @@ static id<IView> instance;
  * @return the <code>IMediator</code> that was removed from the <code>View</code>
  */
 -(id<IMediator>)removeMediator:(NSString *)mediatorName {
-	id<IMediator> mediator = [mediatorMap objectForKey:mediatorName];
+	id<IMediator> mediator = [[mediatorMap objectForKey:mediatorName] retain];
 	if (mediator != nil) {
 		NSArray *interests = [mediator listNotificationInterests];
 		for (NSString *notificationName in interests) {
@@ -162,7 +162,7 @@ static id<IView> instance;
 		[mediator setViewComponent:nil];
 		[mediatorMap removeObjectForKey:mediatorName];
 	}
-	return mediator;
+	return [mediator autorelease];
 }
 
 /**
